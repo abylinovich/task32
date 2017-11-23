@@ -12,7 +12,7 @@ public class UserController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String firstName = req.getParameter("firstname");
+        String firstName = req.getParameter("firstname");// неименованные константы в коде
         String lastName = req.getParameter("lastname");
         User user = getUser(firstName, lastName);
         req.setAttribute("user", user);
@@ -25,7 +25,7 @@ public class UserController extends HttpServlet {
     }
 
     private User getUser(String firstName, String lastName) {
-        User user = new User();
+        User user = new User();// где работа с БД????
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setPhoneNumber("+375-17-202-03-27");
